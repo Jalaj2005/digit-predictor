@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digit Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Handwritten Digit Predictor</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction is not none %}
+            <h2>Predicted Digit: {{ prediction }}</h2>
+        {% endif %}
+
+        {% if image_url %}
+            <div style="text-align: center; margin-top: 20px;">
+                <h3>Uploaded Image:</h3>
+                <img src="{{ url_for('uploaded_file', filename=image_url) }}"
+                     alt="Uploaded Digit"
+                     style="max-width: 200px; border: 2px solid #333; border-radius: 10px;">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

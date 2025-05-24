@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Uploaded Files
+uploads/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Model Files
+*.keras
+*.h5
+
+# VS Code settings (optional)
+.vscode/
