@@ -16,7 +16,7 @@ uploads/
 Thumbs.db
 
 # Model Files
-*.keras
+# *.keras
 *.h5
 
 # VS Code settings (optional)
